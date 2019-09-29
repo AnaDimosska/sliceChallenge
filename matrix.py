@@ -41,8 +41,6 @@ class Matrix:
         else:
             return 'D'
 
-
-
     def path(self):
         """
         This function returns String that represents the path between

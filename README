@@ -6,9 +6,9 @@ The purpose of the Pizza project is to deliver pizzas to predetermined locations
 
 The motive behind this project lies on latest cutting-edge pizza technology research  and curiosity as to how robots would manage to perform human duties
 
-### Installation
+### Setup
 
-Save and extract the zip file in the exact same folder where you save your other projects. Open PyCharm, go to FIle->Open and search the sliceChallenge project.
+Any machine that have installed Python 3.5 or later to run it. To start the program open the 'main.py' directory and enter valid matrix and pizza-drop points.
 
 ##  How to use?
 
@@ -18,16 +18,3 @@ list of steps on how best to get to the locations one by one.
 
 The tests are checking the project functions and whether we have covered all possible cases where the program may return wrong result. Open the tests.py file and you see 3
 different classes Manhattan class, SplitValuesMatrix and SplitValuesPoints where you can test the function for any input you want.
-# License
-
-Copyright (c) 2019
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction,
-including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished
-to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH
-THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -2,25 +2,25 @@ import unittest
 from matrix import Matrix
 from matrix import Point
 from main import (splitPointsCoordinates, splitMatrixCoordinates)
-test_matrix=Matrix(5, 5)
+
+test_matrix = Matrix(5, 5)
 point1 = Point(1, 3)
 point2 = Point(4, 4)
+
 
 class SplitValuesMatrix(unittest.TestCase):
 
     def test_split_matrix_values(self):
-
-
         # Test if given argument matrix equals test matrix coordinates
         matrix_to_compare = splitMatrixCoordinates('5x5')
         self.assertEqual(test_matrix.height, matrix_to_compare.height)
         self.assertEqual(test_matrix.width, matrix_to_compare.width)
 
-        # Incorect input format
+        # Incorrect input format
         with self.assertRaises(ValueError):
             splitMatrixCoordinates('5x')
 
-        # Incorect matrix size
+        # Incorrect matrix size
         with self.assertRaises(ValueError):
             splitMatrixCoordinates('0x0')
 
@@ -32,8 +32,8 @@ class SplitValuesPoints(unittest.TestCase):
 
         # Test argument address equals matching base test object
         splitPointsCoordinates('1,3', test_matrix)
-        self.assertEquals(points.x, test_matrix.points[0].x)
-        self.assertEquals(points.y, test_matrix.points[0].y)
+        self.assertEqual(points.x, test_matrix.points[0].x)
+        self.assertEqual(points.y, test_matrix.points[0].y)
 
         # Test failure for incorrect formatting
         with self.assertRaises(ValueError):
@@ -41,11 +41,11 @@ class SplitValuesPoints(unittest.TestCase):
 
         # Test failure for negative coordinates
         with self.assertRaises(ValueError):
-            splitPointsCoordinates('-1,-1', test_matrix)
+            splitPointsCoordinates('-3,-1', test_matrix)
 
         # Test for failure of coordinates larger than grid
         with self.assertRaises(ValueError):
-            splitPointsCoordinates('6,6', test_matrix)
+            splitPointsCoordinates('7,8', test_matrix)
 
 
 class ManhattanTest(unittest.TestCase):
