@@ -8,7 +8,7 @@ point2 = Point(4, 4)
 
 class SplitValuesMatrix(unittest.TestCase):
 
-    def test_grid_arg_parsing(self):
+    def test_split_matrix_values(self):
 
 
         # Test if given argument matrix equals test matrix coordinates
@@ -26,7 +26,7 @@ class SplitValuesMatrix(unittest.TestCase):
 
 
 class SplitValuesPoints(unittest.TestCase):
-    def test_address_arg_parsing(self):
+    def test_split_list_points_values(self):
         # Base test objects
         points = Point(1, 3)
 
@@ -49,7 +49,7 @@ class SplitValuesPoints(unittest.TestCase):
 
 
 class ManhattanTest(unittest.TestCase):
-    def test_route_between_two(self):
+    def test_route_between_two_points(self):
         # Test matrix
         test_matrix.points.append(point1)
         test_matrix.points.append(point2)
@@ -65,7 +65,7 @@ class ManhattanTest(unittest.TestCase):
         test_matrix.points.append(point2)
 
         route = test_matrix.path()
-        self.assertEqual(route, 'NDEEEENNND')
+        self.assertEqual(route, 'ENNNDEEEND')
 
 
 if __name__ == '__main__':

@@ -41,10 +41,12 @@ class Matrix:
         else:
             return 'D'
 
+
+
     def path(self):
         """
         This function returns String that represents the path between
-        the start position of the dilivery man and remaining points
+        the start position of the delivery man and remaining points
 
         """
         if not self.points:

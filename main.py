@@ -5,8 +5,13 @@ from matrix import Point
 
 
 def splitMatrixCoordinates(input_matrix):
-    pattern = re.compile('^[0-9]*x[0-9]*$')
-    if not pattern.match(input_matrix):
+    """
+        This function returns the matrix in the correct format. That means it checks if the input is "numberxnumber"
+        and
+
+    """
+    matrix_to_check = re.compile("^[0-9]*x[0-9]*$")
+    if not matrix_to_check.match(input_matrix):
         raise ValueError("Address coordinates must be declared matching format 1,3")
     # This function will split string in parts in regex 'x'
     input_parts = input_matrix.split('x')
@@ -17,12 +22,13 @@ def splitMatrixCoordinates(input_matrix):
     if width < 1 or height < 1:
         raise ValueError("Please enter valid grid representation like 5x5")
 
+    # Returns the matrix in correct format
     return Matrix(width, height)
 
 
 def splitPointsCoordinates(points, grid):
-    pattern = re.compile('^[0-9]*,[0-9]*$')
-    if not pattern.match(points):
+    point_to_check = re.compile('^[0-9]*,[0-9]*$')
+    if not point_to_check.match(points):
         raise ValueError("Address coordinates must be declared matching format 1,3")
     # This function will split string in parts in regex ','
     points_array = points.split(',')
@@ -33,8 +39,10 @@ def splitPointsCoordinates(points, grid):
     if x > grid.width or y > grid.height:
         raise ValueError("Please enter coordinates that will fit into the grid according to your grid input coordinates")
 
-    stations = Point(x, y)
-    grid.points.append(stations)
+    # station contains point in correct format
+    station = Point(x, y)
+    grid.points.append(station)
+
 
 if __name__ == "__main__":
     # Get command line
